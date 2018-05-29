@@ -19,7 +19,7 @@ CSV.foreach('./db/fixture/house_data.csv', headers: true) do |row|
                           last_name: row['Lastname'],
                           city: row['City'],
                           num_of_people: row['num_of_people'],
-                          has_child: row['has_child'])
+                          has_child: row['has_child'] == 'Yes')
 end
 p 'house data created'
 
